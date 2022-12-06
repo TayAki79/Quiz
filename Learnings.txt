@@ -1,0 +1,33 @@
+meta information won't be displayed on the website but it's still machine parsable which means machine readable
+
+NEW!!! a meta tag with a "description" value for the "name" attribute. This is followed by the "content" attribute which value is just a short description of the site. This tag is important for accessibility and SEO (Search Engine Optimization)
+
+The title tag is important for screen readers and also for SEO
+
+The max() function uses the largest value, from a comma-separated list of values, as the property value.
+syntax-example: 
+                
+                width: max(50%, 300px)
+
+The aspect-ration property sets a certain ratio of width and height of an element
+
+UI (User Interface) components need a role, a name and sometimes a value for people who are using assistive technologies like screen readers, switch controls and speech recognition software.
+An important accessibility principle is that a custom control needs a role, a name and sometimes a value.
+The region role points to a specific area (region) of page.
+
+A common pattern to visually hide text for only screen readers to read:
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+
+To remove the dots of the list element of an unordered list you can use the list-style property and set it to none
+
+When using the scroll-behavior property to the * selector and set its value to smooth, we the page scrolls slowly to the desired area we want to navigate to
+
+vestibular disorder = balance disorder

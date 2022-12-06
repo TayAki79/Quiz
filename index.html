@@ -3,9 +3,123 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="description" content="Learning Accessibility by building a quiz">
+    <title>Building a quiz</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    
+    <header>
+      <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="fcc-logo">
+      <h1>HTML/CSS Quiz</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#student-info" accesskey="i">INFO</a>
+          </li>
+          <li>
+            <a href="#html-questions" accesskey="h">HTML</a>
+          </li>
+          <li>
+            <a href="#css-questions" accesskey="c">CSS</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz"></form>
+      <section role="region" aria-labelledby="student-info">
+        <h2 id="student-info">Student Info</h2>
+        <div class="info">
+          <label for="name">Name:</label>
+          <input id="name" type="text">
+        </div>
+        <div class="info">
+          <label for="email">Email:</label>
+          <input id="email" type="email">
+        </div>
+        <div class="info">
+          <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+          <input id="birth-date" type="date">
+        </div>
+      </section>
+      <section role="region" aria-labelledby="html-questions">
+        <h2 id="html-questions">HTML</h2>
+        <div class="question-block">
+          <p>1</p>
+          <fieldset class="question" name="html-question-1">
+            <legend>
+              You can place an html tag inside a body tag.
+            </legend>
+            <ul class="answers-list">
+              <li>
+                <label for="q1-a1">
+                  <input id="q1-a1" type="radio" value="true" name="question-1"> True
+                </label>
+              </li>
+              <li>
+                <label for="q1-a2">
+                  <input id="q1-a2" type="radio" value="false" name="question-1"> False
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="question-block">
+          <p>2</p>
+          <fieldset class="question" name="html-question-2">
+            <legend>
+              An img tag is self-closing.
+            </legend>
+            <ul class="answers-list">
+              <li>
+                <label for="q2-a1">
+                  <input id="q2-a1" type="radio" value="true" name="question-2"> True
+                </label>
+              </li>
+              <li>
+                <label for="q2-a2">
+                  <input id="q2-a2" type="radio" value="false" name="question-2"> False
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </section>
+      <section role="region" aria-labelledby="css-questions">
+        <h2 id="css-questions">CSS</h2>
+        <div class="formrow">
+          <div class="question-block">
+            <label for="q1-a1">
+              Which CSS property can change the background color of an element?
+            </label>
+          </div>
+          <div class="answer">
+            <select name="background-color" id="q1-a1">
+              <option value="">Select an option</option>
+              <option value="background-color">background-color</option>
+              <option value="color">color</option>
+            </select>
+          </div>
+          <div class="question-block">
+            <label for="cursor">
+              How can you change your cursor from an arrow-symbol to a finger-pointer-symbol while hovering over an specific element?
+            </label>
+          </div>
+          <div class="answer">
+            <textarea name="cursor" id="cursor" cols="24" rows="5">You can change your cursor-symbol by ...
+            </textarea>
+          </div>
+        </div>
+      </section>
+      <button type="submit">Send</button>
+    </main>
+    <footer>
+      <address>
+        <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
   </body>
 </html>
